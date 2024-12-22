@@ -108,7 +108,8 @@ button:hover {
 
 .informacion {
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1em;
+  font-family: var(--fuentePrincipal);
   color: #3a981f;
   max-width: 80%;
   margin: 0 auto 20px auto;
@@ -120,12 +121,14 @@ button:hover {
   color: #840303;
   max-width: 80%;
   margin: 0 auto 20px auto;  
+  font-family: var(--FuenteSecundaria);
 }
 
 /* Estilo para el párrafo de instrucciones */
 #instrucciones {
   text-align: center;
   font-size: 1.1em;
+  font-family: var(--FuenteSecundaria);
   color: #555;
   max-width: 80%;
   margin: 0 auto 20px auto;
@@ -171,18 +174,18 @@ button:hover {
 
   #instrucciones {
     font-size: 1em;
+    font-family: var(--FuenteSecundaria);
   }
 }
 
 /* Footer */
 .footer {
   background: linear-gradient(to top, #00b200, #ffffff);
-  padding: 1rem 0;
-  margin-top: 2rem;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
 }
 .footer__texto {
   text-align: center;
-  font-family: var(--fuentePrincipal);
   font-size: 1rem;
   color: white;
 }
