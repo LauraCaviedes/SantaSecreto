@@ -19,30 +19,7 @@ console.log("Nombre:", nombre);
 
 // Función para mostrar la información del amigo secreto
 function mostrarInformacion() {
-  // Ocultar la imagen original
-  document.getElementById("imagen-ss").style.display = "none";
-  
-  // Mostrar la nueva imagen al 10% de tamaño
-  document.getElementById("imagen-ss1").style.display = "block";
-  document.getElementById("imagen-ss1").style.maxWidth = "10%";  // Establecemos el tamaño al 10%
-  
-  fetch('data/amigos.csv')  // Ruta al archivo CSV dentro del repositorio
-    .then(response => response.text())
-    .then(data => {
-      // Procesar el archivo CSV y buscar el amigo secreto
-      const amigos = procesarCSV(data);
-      const amigoSecreto = obtenerAmigoSecreto(amigos, nombre);
-
-      // Mostrar la información
-      if (amigoSecreto) {
-        document.getElementById("nombreAmigo").innerText = `Amigo Secreto: ${amigoSecreto.amigoSecreto}`;
-        document.getElementById("codigoAmigo").innerText = `Código: ${amigoSecreto.codigo}`;
-        document.getElementById("descripcionAmigo").innerText = amigoSecreto.descripcion || 'Tu amigo secreto no ha dicho nada :(';
-      } else {
-        alert("No se encontró el amigo secreto para este nombre.");
-      }
-    })
-    .catch(error => console.error('Error al cargar el archivo CSV:', error));
+ 
 }
 
 // Diccionario con la información de los amigos secretos
@@ -50,12 +27,12 @@ const amigosSecretos = [
   { nombre: "AlbaLu", codigo: "TH6Y4", AmigoSecreto: "GloGlo", descripcion: "" },
   { nombre: "Carmenza", codigo: "GT4R5", AmigoSecreto: "AlbaLu", descripcion: "" },
   { nombre: "Elizabeth", codigo: "Ll8iK6", AmigoSecreto: "Oscar", descripcion: "" },
-  { nombre: "GloGlo", codigo: "Gr4T55", AmigoSecreto: "Laura", descripcion: "" },
+  { nombre: "GloGlo", codigo: "Gr4T55", AmigoSecreto: "Laura", descripcion: "Querido Santa Secreto, me gustaría 'un short, sandalias'" },
   { nombre: "Hugo", codigo: "BNj76", AmigoSecreto: "Javier", descripcion: "" },
   { nombre: "Javier", codigo: "NMi92", AmigoSecreto: "JuanDi", descripcion: "" },
   { nombre: "JuanDi", codigo: "Grd34RR", AmigoSecreto: "Paula", descripcion: "" },
   { nombre: "Laura", codigo: "gtT5HA", AmigoSecreto: "Elizabeth", descripcion: "" },
-  { nombre: "Oscar", codigo: "ACQ78", AmigoSecreto: "Carmenza", descripcion: "" },
+  { nombre: "Oscar", codigo: "ACQ78", AmigoSecreto: "Carmenza", descripcion: "Querido Santa secreto, me gustaría 'Buso de capota o hoofie, negro si teine emblemas de BMW mejor sino q sea bonito sin tanto estampado, talla XL y que gracias'" },
   { nombre: "Paula", codigo: "QQt4A", AmigoSecreto: "Hugo", descripcion: "" }
 ];
 
@@ -65,6 +42,14 @@ function obtenerAmigoSecreto(amigos, nombreUsuario) {
   console.log("Buscando amigo secreto para:", nombreUsuario);
   console.log("Amigo encontrado:", amigo);  // Ver qué objeto se encuentra
   return amigo ? amigo.AmigoSecreto : null;  // Si se encuentra, devolver el amigoSecreto; si no, devolver null
+}
+
+// Función obtener descripción de amigo secreto
+function obtenerAmigoSecretoDescripcion(amigos, amigosecreto) {
+  const amigo = amigos.find(amigo => amigo.nombre === amigosecreto);  // Buscar al amigo que tenga el mismo nombre
+  console.log("Amigo secreto:", amigosecreto);
+  console.log("Descripcion encontrado:", amigo);  // Ver qué objeto se encuentra
+  return amigo ? amigo.descripcion : null;  // Si se encuentra, devolver el amigoSecreto; si no, devolver null
 }
 
 // Obtener el nombre de la persona desde el título de la página
@@ -77,15 +62,21 @@ function obtenerNombreDesdeTitle() {
   return nombre;
 }
 
-// Mostrar información al hacer clic en el botón "Mostrar Información"
-document.getElementById("mostrarInformacionBtn").addEventListener("click", function() {
+ // Mostrar información al hacer clic en el botón "Mostrar Información"
+ document.getElementById("mostrarInformacionBtn").addEventListener("click", function() {
   const nombreUsuario = obtenerNombreDesdeTitle();  // Obtener el nombre desde el título
   const amigoSecreto = obtenerAmigoSecreto(amigosSecretos, nombreUsuario);
+  const descripcionAS = obtenerAmigoSecretoDescripcion(amigosSecretos, amigoSecreto);
 
   if (amigoSecreto) {
     document.getElementById("nombreAmigo").innerText = `Amigo Secreto: ${amigoSecreto}`;
     // Si tienes descripción, también la mostrarías aquí
-    document.getElementById("descripcionAmigo").innerText = "Tu amigo secreto no ha dicho nada :("; // Como no hay descripción, se pone esto por defecto
+    //document.getElementById("descripcionAmigo").innerText = "Tu amigo secreto no ha dicho nada :("; // Como no hay descripción, se pone esto por defecto
+    if (descripcionAS) {
+      document.getElementById("descripcionAmigo").innerText = descripcionAS; // Como no hay descripción, se pone esto por defecto
+    } else {
+      document.getElementById("descripcionAmigo").innerText = "Tu amigo secreto no ha dicho nada :(";
+    }
   } else {
     alert("No se encontró el amigo secreto para este nombre.");
   }
