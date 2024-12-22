@@ -1,3 +1,8 @@
+/* Definicion de colores y fuentes */
+:root {
+  --fuentePrincipal: "Sour Gummy", cursive;
+  --FuenteSecundaria: "Poiret One", sans-serif;
+}
 /* Estilo para el botón de menú */
 .menu-btn {
   background: none;
@@ -53,6 +58,7 @@
 header h1 {
   text-align: center;
   font-size: 3em;
+  font-family: var(--fuentePrincipal);
   color: #840303;
   margin: 0;
   padding-top: 20px;
@@ -60,6 +66,11 @@ header h1 {
   background: linear-gradient(to bottom, #00b200, #ffffff);
 }
 
+p {
+    font-size: 1.8rem;
+    font-family: var(--FuenteSecundaria);
+    color: var(--blanco);
+}
 /* Estilo para el encabezado */
 header {
   background: linear-gradient(to bottom, #00b200, #ffffff);
@@ -151,6 +162,7 @@ button:hover {
 @media (max-width: 668px) {
   header h1 {
     font-size: 2em;
+    font-family: var(--fuentePrincipal);
   }
 
   .imagen-ss {
@@ -161,3 +173,4 @@ button:hover {
     font-size: 1em;
   }
 }
+
