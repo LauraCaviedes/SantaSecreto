@@ -72,7 +72,7 @@ header {
 .imagen-ss {
   display: block;
   margin: 30px auto;
-  max-width: 30%;  /* Imagen con un tamaño relativo */
+  max-width: 20%;  /* Imagen con un tamaño relativo */
   height: auto;
   transition: opacity 0.5s ease;
 }

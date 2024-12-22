@@ -137,3 +137,9 @@ document.getElementById("enviarBtn").addEventListener("click", actualizarDescrip
 function redirigir(nombre) {
   window.location.href = `pages/${nombre}-gtT5HA.html`;
 }
+
+// Función para mostrar/ocultar el menú
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('show'); // Cambia entre mostrar y ocultar el menú
+}
