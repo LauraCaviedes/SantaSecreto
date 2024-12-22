@@ -52,7 +52,7 @@
 /* Estilo del título */
 header h1 {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #840303;
   margin: 0;
   padding-top: 20px;
@@ -72,7 +72,7 @@ header {
 .imagen-ss {
   display: block;
   margin: 30px auto;
-  max-width: 20%;  /* Imagen con un tamaño relativo */
+  max-width: 40%;  /* Imagen con un tamaño relativo */
   height: auto;
   transition: opacity 0.5s ease;
 }
@@ -148,13 +148,13 @@ button:hover {
 }
 
 /* Media query para adaptar el diseño a pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 668px) {
   header h1 {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .imagen-ss {
-    max-width: 30%;
+    max-width: 40%;
   }
 
   #instrucciones {
