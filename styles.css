@@ -67,9 +67,9 @@ header h1 {
 }
 
 p {
-    font-size: 1.8rem;
-    font-family: var(--FuenteSecundaria);
-    color: var(--blanco);
+  font-weight: 600;
+  font-family: var(--FuenteSecundaria);
+  color: var(--blanco);
 }
 /* Estilo para el encabezado */
 header {
@@ -108,16 +108,17 @@ button:hover {
 
 .informacion {
   text-align: center;
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: var(--fuentePrincipal);
   color: #3a981f;
   max-width: 80%;
   margin: 0 auto 20px auto;
+  font-weight: 700;
 }
 /* Estilo para el párrafo de broma */
 #broma {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #840303;
   max-width: 80%;
   margin: 0 auto 20px auto;  
@@ -175,6 +176,7 @@ button:hover {
   #instrucciones {
     font-size: 1em;
     font-family: var(--FuenteSecundaria);
+    font-style: bold;
   }
 }
 
@@ -188,4 +190,5 @@ button:hover {
   text-align: center;
   font-size: 1rem;
   color: white;
+  font-weight: 700;
 }
