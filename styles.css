@@ -174,3 +174,15 @@ button:hover {
   }
 }
 
+/* Footer */
+.footer {
+  background: linear-gradient(to top, #00b200, #ffffff);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footer__texto {
+  text-align: center;
+  font-family: var(--fuentePrincipal);
+  font-size: 1rem;
+  color: white;
+}
