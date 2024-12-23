@@ -192,3 +192,7 @@ button:hover {
   color: white;
   font-weight: 700;
 }
+
+.Hugo {
+  font-size: 2em;
+}
