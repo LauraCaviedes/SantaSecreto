@@ -24,11 +24,12 @@ function mostrarInformacion() {
 
 // Diccionario con la información de los amigos secretos
 const amigosSecretos = [
-  { nombre: "AlbaLu", codigo: "TH6Y4", AmigoSecreto: "GloGlo", descripcion: "" },
-  { nombre: "Carmenza", codigo: "GT4R5", AmigoSecreto: "AlbaLu", descripcion: "" },
+  { nombre: "AlbaLu", codigo: "TH6Y4", AmigoSecreto: "GloGlo", descripcion: "Querido amigo secreto, me gustaría 'Un bolígrafo recargable, o un Rummi-Q, o un marranito para cable tipo C, o unos esmaltes de la rga duración o secado rápido.'" },
+  { nombre: "Carmenza", codigo: "GT4R5", AmigoSecreto: "AlbaLu", descripcion: "Querido amigo secreto, me gustaría 'Una powerbank para cargar el celular en los viajes'" },
   { nombre: "Elizabeth", codigo: "Ll8iK6", AmigoSecreto: "Oscar", descripcion: "Querido amigo secreto, me gustaría 'un jueguito de posillos chocolateros'" },
   { nombre: "GloGlo", codigo: "Gr4T55", AmigoSecreto: "Laura", descripcion: "Querido Santa Secreto, me gustaría 'un short, sandalias'" },
   { nombre: "Hugo", codigo: "BNj76", AmigoSecreto: "Javier", descripcion: "" },
+  { nombre: "Juanito", codigo: "1111", AmigoSecreto: "Juanito", descripcion: "" },
   { nombre: "Javier", codigo: "NMi92", AmigoSecreto: "JuanDi", descripcion: "Querido amigo secreto, me gustaría 'Camiseta, correa, medias,  pantaloneta cachucha, loción cualquier detalle esta bien'" },
   { nombre: "JuanDi", codigo: "Grd34RR", AmigoSecreto: "Paula", descripcion: "" },
   { nombre: "Laura", codigo: "gtT5HA", AmigoSecreto: "Elizabeth", descripcion: "Querido amigo secreto me gustaría 'Puede ser un bolso bonito o un joyero o un hoodie oversize talla M'" },

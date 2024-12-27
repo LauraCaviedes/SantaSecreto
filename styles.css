@@ -115,6 +115,10 @@ button:hover {
   margin: 0 auto 20px auto;
   font-weight: 700;
 }
+
+#descripcionAmigo {
+  color: #840303;
+}
 /* Estilo para el párrafo de broma */
 #broma {
   text-align: center;
