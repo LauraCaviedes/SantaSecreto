@@ -29,7 +29,7 @@ const amigosSecretos = [
   { nombre: "Elizabeth", codigo: "Ll8iK6", AmigoSecreto: "Oscar", descripcion: "Querido amigo secreto, me gustaría 'un jueguito de posillos chocolateros'" },
   { nombre: "GloGlo", codigo: "Gr4T55", AmigoSecreto: "Laura", descripcion: "Querido Santa Secreto, me gustaría 'un short, sandalias'" },
   { nombre: "Hugo", codigo: "BNj76", AmigoSecreto: "Javier", descripcion: "" },
-  { nombre: "Juanito", codigo: "1111", AmigoSecreto: "Juanito", descripcion: "" },
+  { nombre: "Juanito", codigo: "1111", AmigoSecreto: "Juanito", descripcion: "HOLI" },
   { nombre: "Javier", codigo: "NMi92", AmigoSecreto: "JuanDi", descripcion: "Querido amigo secreto, me gustaría 'Camiseta, correa, medias,  pantaloneta cachucha, loción cualquier detalle esta bien'" },
   { nombre: "JuanDi", codigo: "Grd34RR", AmigoSecreto: "Paula", descripcion: "" },
   { nombre: "Laura", codigo: "gtT5HA", AmigoSecreto: "Elizabeth", descripcion: "Querido amigo secreto me gustaría 'Puede ser un bolso bonito o un joyero o un hoodie oversize talla M, o un balón de volley'" },
